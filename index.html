@@ -47,7 +47,7 @@
         <section class="hero">
                 <div class="container">
                     <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                    <button class="hero-btn button" type="button">Заказать услугу</button>
+                    <button class="hero-btn button" type="button" data-modal-open>Заказать услугу</button>
                 </div>
         </section>
         <!--Преимущества-->
@@ -100,13 +100,22 @@
                 <h2 class="subtitle title">Чем мы занимаемся</h2>
                     <ul class="services-list list">
                         <li class="services-list-item">
-                            <img class="services-list-img" src="./images/img.jpg" alt="Разработчик пишет код" width="370" height="294">
+                            <div class="services-card">
+                                <img class="services-list-img" src="./images/img.jpg" alt="Разработчик пишет код" width="370" height="294">
+                                <p class="services-list-item-text">Десктопные приложения</p>
+                            </div>
                         </li>
                         <li class="services-list-item">
-                            <img class="services-list-img" src="./images/img(1).jpg" alt="Разработчик адаптирует код для телефона" width="370" height="294">
+                            <div class="services-card">
+                                <img class="services-list-img" src="./images/img(1).jpg" alt="Разработчик адаптирует код для телефона" width="370" height="294">
+                                <p class="services-list-item-text">Мобильные приложения</p>
+                            </div>
                         </li>
                         <li class="services-list-item">
-                            <img class="services-list-img" src="./images/img(2).jpg" alt="Разработчик адаптирует код для планшета" width="370" height="294">
+                            <div class="services-card">
+                                <img class="services-list-img" src="./images/img(2).jpg" alt="Разработчик адаптирует код для планшета" width="370" height="294">
+                                <p class="services-list-item-text">Дизайнерские решения</p>
+                            </div>
                         </li>
                     </ul>
             </div>
@@ -366,5 +375,15 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-btn-close" data-modal-close>
+                <svg class="btn-close" width="11px" height="11px">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
