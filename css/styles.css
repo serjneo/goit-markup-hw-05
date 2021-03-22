@@ -227,7 +227,7 @@ img {
   left: 700px;
   top: 430px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -313,19 +313,21 @@ img {
   position: relative;
 }
 .services-list-item-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 370px;
   height: 70px;
   bottom: 0;
   left: 0;
-  padding: 27px 0px;
   background-color: rgba(47, 48, 58, 0.8);
   color: var(--background-color);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  text-align: center;
+
   text-transform: uppercase;
 }
 /*END SERVICES*/
@@ -382,8 +384,8 @@ img {
 .social-list-link {
   background-color: var(--background-color);
   fill: var(--color-link);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list-link:hover,
 .social-list-link:focus {
@@ -488,12 +490,10 @@ img {
   background-color: var(--color-footer-link);
   fill: var(--background-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-list-link:hover,
 .footer-social-list-link:focus {
   background-color: var(--accent-color);
-  fill: var(--background-color);
 }
 /*END FOOTER*/
 
@@ -516,7 +516,8 @@ img {
   width: 128px;
   left: 576px;
   top: 174px;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -565,11 +566,11 @@ img {
 }
 .projects-card {
   display: block;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-card:hover,
 .projects-card:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card {
   padding: 20px 24px;
@@ -589,6 +590,7 @@ img {
   letter-spacing: 0.03em;
   text-align: left;
   padding: 63px 24px;
+  overflow: auto;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
